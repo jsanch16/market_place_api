@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+	#maps to /api directory in controllers
+	#routes would be matched by /api/controllername
+	
+	namespace :api, defaults: { format: :json}, 
+															constraints: {subdomain: 'api'}, path: '/' do
+	end
 end
